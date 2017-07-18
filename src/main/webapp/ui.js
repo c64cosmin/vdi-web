@@ -53,7 +53,11 @@ app.populateList = function(){
         var div_name = document.createElement('div');
         div_name.className = "app_button_name";
         div_name.id = pool_id;
-        div_name.innerHTML = vdiClient.session.pools[pool_id].name;
+        if(desktopID == null){
+            div_name.innerHTML = vdiClient.session.pools[pool_id].name;
+        } else {
+            div_name.innerHTML = "Open " + vdiClient.session.pools[pool_id].name;
+        }
         div_button.appendChild(div_name);
     }
 }
