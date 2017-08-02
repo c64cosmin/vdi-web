@@ -38,7 +38,7 @@ public class Config {
     public static void readConfig() {
         JSONObject json = null;
         try {
-            json = new JSONObject(Utility.readFile("/etc/guacamole/vdi-client.json"));
+            json = new JSONObject(Utility.readFile("/etc/vdi-web/vdi-client.json"));
             authUrl = json.getString("auth-url");
             projectName = json.getString("project-name");
             userDomainName = json.getString("user-domain-name");
